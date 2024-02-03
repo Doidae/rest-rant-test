@@ -18,6 +18,12 @@ router.post('/', (req, res) => {
     places.push(req.body)
     res.redirect('/places')
 })
+
+router.get('/:id/edit', (req, res) => {
+    res.render('places/edit')
+})
+
+
 router.get('/new', (req, res) => {
     res.render('places/new')
 })
